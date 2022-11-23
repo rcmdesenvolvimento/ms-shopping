@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,8 +16,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "user")
 public class Usuario {
 
 	@Id
@@ -28,6 +30,7 @@ public class Usuario {
 	private String endereco;
 	private String email;
 	private String telefone;
-	private Date dataCadastro;
+	private Date dataCadastro = new Date();
+
 
 }
